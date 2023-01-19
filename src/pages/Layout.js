@@ -1,5 +1,5 @@
-import { Outlet, Link } from "react-router-dom";
-
+import { Outlet, Link,NavLink } from "react-router-dom";
+import './style/layout.scss' 
 // Anytime we link to an internal path, we will use <Link> instead of <a href="">.
 
 const Layout = () => {
@@ -8,22 +8,18 @@ const Layout = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink className={(navData) => (navData.isActive ? 'active' : '')} to="/">Home</NavLink>
           </li>
           <li>
             
 
             {/* <Link to="/form">form</Link> */}
-            <a
-   target="_blank"
-   rel="noreferrer"
-   href='https://www.yasdl.com'>
-        form
-</a>
+            <a className={(navData) => (navData.isActive ? 'active' : '')} rel="noreferrer" href='https://rt110b.sse.codesandbox.io/'>form</a>
        
           </li>
           <li>
-            <Link to="/ShowTableDB">ShowTableDB</Link>
+            {/* className="active" */}
+            <NavLink className={(navData) => (navData.isActive ? 'active' : '')}  to="/ShowTableDB">ShowTableDB</NavLink>
           </li>
         </ul>
       </nav>
