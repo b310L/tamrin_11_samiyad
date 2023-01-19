@@ -11,8 +11,16 @@ const Layout = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="yasdl.com">yasdl</a>
-            <Link to="/form">form</Link>
+            
+
+            {/* <Link to="/form">form</Link> */}
+            <a
+   target="_blank"
+   rel="noreferrer"
+   href='https://www.yasdl.com'>
+        form
+</a>
+       
           </li>
           <li>
             <Link to="/ShowTableDB">ShowTableDB</Link>
