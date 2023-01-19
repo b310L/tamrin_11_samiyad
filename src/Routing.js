@@ -15,6 +15,7 @@ function Routing() {
           <Route path="form" element={<Form />} />
           <Route path="ShowTableDB" element={<ShowTableDB />} />
           <Route path="*" element={<NoPage />} />
+      
         </Route>
       </Routes>
     </BrowserRouter>
