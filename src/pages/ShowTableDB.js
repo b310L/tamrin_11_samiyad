@@ -1,6 +1,11 @@
+import BasicTable from '../components/BasicTable'
+
 
 const ShowTableDB = () => {
-  return <h1>ShowTableDB </h1>;
+  return <>
+  <BasicTable/>
+
+  </>;
 };
 
 export default ShowTableDB;

@@ -9,29 +9,35 @@ nav{
         background-color: #f3f3f3;
         display: flex;
       }
-      
-    li{order:54;;}
-      
-      li a {
-        display: block;
-        color: #666;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-      
-      li a:hover:not(.active) {
-        background-color: rgb(221, 221, 221);
-      }
-      
-      li a.active {
-        color: white;
-        background-color: $active_color;
-       
-        order: 0; 
-        transition: all .4s;
-      }
-     
-      
+      li {
+        order:54;
+        
+        .active {
+            color: white;
+            background-color: $active_color;
+           
+            order: 0; 
+            transition: all .4s;
+          }
+        a {
+            display: block;
+            color: #666;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            .active {
+                color: white;
+                background-color: $active_color;
+               
+                order: 0; 
+                transition: all .4s;
+              }
+              &:hover:not(.active) {
+                background-color: rgb(221, 221, 221);
+              }
+          }
+    }
       
 }
+
+

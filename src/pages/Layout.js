@@ -11,16 +11,17 @@ const Layout = () => {
             <NavLink className={(navData) => (navData.isActive ? 'active' : '')} to="/">Home</NavLink>
           </li>
           <li>
+            {/* className="active" */}
+            <NavLink className={(navData) => (navData.isActive ? 'active' : '')}  to="/ShowTableDB">ShowTableDB</NavLink>
+          </li>
+          <li>
             
 
             {/* <Link to="/form">form</Link> */}
             <a className={(navData) => (navData.isActive ? 'active' : '')} rel="noreferrer" href='https://rt110b.sse.codesandbox.io/'>form</a>
        
           </li>
-          <li>
-            {/* className="active" */}
-            <NavLink className={(navData) => (navData.isActive ? 'active' : '')}  to="/ShowTableDB">ShowTableDB</NavLink>
-          </li>
+          
         </ul>
       </nav>
 
