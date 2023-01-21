@@ -48,6 +48,12 @@ const backend_url=`https://yjx7nf.sse.codesandbox.io`;
 
 
        const pageClick=(ele)=>{
+        const active = document.querySelectorAll(".active");
+            active.forEach((element) => {
+            element.classList.remove("active");
+            });
+
+    ele.target.classList.add("active");
         const number=ele.target.innerHTML;
         const fetchDataPage = async () => {
         const response =await axios.get(`${backend_url}/viewAll/${number}`).catch((error)=>{
@@ -69,7 +75,10 @@ const backend_url=`https://yjx7nf.sse.codesandbox.io`;
        const pagination= [];
     //    pagination.push(<a href="#" id='beforePage'>&laquo;</a>);
        for (var i = 1; i <= pages; i++) {
-        pagination.push(<a className= "page" key={i} onClick={pageClick}>{i}</a>);
+        if (i === 1) 
+        {pagination.push(<a className= "page active" key={i}  onClick={pageClick}>{i}</a>);}
+        else{pagination.push(<a className= "page" key={i} onClick={pageClick}>{i}</a>);}
+        
        }
     //    pagination.push(<a href="#" id='nextPage'>&raquo;</a>);
        console.log(`pagination ====${pagination}`);
